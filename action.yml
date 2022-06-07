@@ -1,6 +1,6 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Pylint'
+description: 'Pylint action in docker'
 inputs:
   pylint-input-args:  # id of input
     description: 'input args to run pylint'
