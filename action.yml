@@ -2,7 +2,7 @@
 name: 'Pylint'
 description: 'Pylint action in docker'
 inputs:
-  pylint-input-args:  # id of input
+  pylint-input-args:
     description: 'input args to run pylint'
     required: true
     default: 'pylint --help'
