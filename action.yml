@@ -1,0 +1,17 @@
+---
+name: Action TEST
+description: Pylint action running from python docker image
+inputs:
+  input-one-id:
+    description: 'input one'
+    required: true
+    default: 'hi hi'
+outputs:
+  time:
+    description: 'the time'
+
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.input-one-id }}
