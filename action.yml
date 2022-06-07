@@ -1,17 +1,17 @@
----
-name: Action TEST
-description: Pylint action running from python docker image
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
-  input-one-id:
-    description: 'input one'
+  who-to-greet:  # id of input
+    description: 'Who to greet'
     required: true
-    default: 'hi hi'
+    default: 'World'
 outputs:
-  time:
-    description: 'the time'
-
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
-  using: docker
-  image: Dockerfile
+  using: 'docker'
+  image: 'Dockerfile'
   args:
-    - ${{ inputs.input-one-id }}
+    - ${{ inputs.who-to-greet }}
+    
