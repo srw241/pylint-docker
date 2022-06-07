@@ -1,5 +1,11 @@
-#!/bin/sh -l
+#!/bin/bash
+echo "hej hej"
+set -e
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+echo "#################################################"
+echo "Starting ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
+
+sh -c "$*"
+
+echo "#################################################"
+echo "Completed ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
